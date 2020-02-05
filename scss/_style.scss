@@ -1,0 +1,212 @@
+
+body {
+  margin: 0;
+  @include full-screen-backgr('../img/art_and_motin_7.jpg');
+  //background-image: url("../img/art_and_motin_7.jpg");
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -3;
+  color: white;
+}
+
+container-fluid {
+  position: absolute;
+  background-image: linear-gradient(rgba(61, 112, 119, 0.25), rgba(30, 46, 119, 0.26));
+  top: 30px;
+  width: 100%;
+  z-index: -1;
+}
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: fade-out($primary, 0.1);
+  .cta-inner {
+    position: relative;
+    padding: 3rem;
+    margin: 0.5rem;
+    background-color: fade-out($white, 0.15);
+    &:before {
+      border-radius: 0.5rem;
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      bottom: -0.5rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      border: 0.25rem solid fade-out($white, 0.15);
+    }
+  }
+}
+.footer {
+  background-color: fade-out($secondary, 0.1);
+}
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-faded {
+  color: fade-out($white, 0.7);
+}
+
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+
+  @include heading-font;
+  .site-heading-upper {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .site-heading-lower {
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 4rem;
+  }
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}
+
+.bg-faded {
+  background-color: fade-out($white, 0.15);
+}
+
+.intro {
+  position: relative;
+  @media (min-width: 992px) {
+    .intro-img {
+      width: 75%;
+      float: right;
+    }
+    .intro-text {
+      left: 0;
+      width: 60%;
+      margin-top: 3rem;
+      position: absolute;
+      .intro-button {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        bottom: -2rem;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .intro-text {
+      width: 45%;
+    }
+  }
+}
+
+#mainNav {
+  background-color: fade-out($secondary, 0.1);
+  @include heading-font;
+  .navbar-brand {
+    color: $primary;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: fade-out($white, 0.3);
+
+        font-weight: 800;
+      }
+      &.active {
+        .nav-link {
+          color: $primary;
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-size: 0.9rem;
+          &:hover {
+            color: fade-out($white, 0.6);
+          }
+        }
+        &.active {
+          .nav-link:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-item {
+  @media (min-width: 992px) {
+    .product-item-title {
+      position: relative;
+      z-index: 1;
+      margin-bottom: -3rem;
+    }
+    .product-item-img {
+      position: relative;
+      z-index: 0;
+      max-width: 60vw;
+    }
+    .product-item-description {
+      position: relative;
+      z-index: 1;
+      margin-top: -3rem;
+      max-width: 50vw;
+    }
+  }
+}
+
+.about-heading {
+  @media (min-width: 992px) {
+    .about-heading-img {
+      position: relative;
+      z-index: 0;
+    }
+    .about-heading-content {
+      margin-top: -5rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

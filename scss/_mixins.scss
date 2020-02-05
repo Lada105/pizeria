@@ -1,0 +1,52 @@
+// full-screen cover
+@mixin full-screen-backgr($img-path) {
+  background-image: url('#{$img-path}');
+  background-repeat:  no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+@mixin heading-font {
+  font-family: 'Raleway';
+}
+
+@mixin body-font {
+  font-family: 'Lora';
+}
+
+
+
+// text
+@mixin txt($weight) {
+  color: white;
+  @if $weight == bold { font-weight: bold;}
+  @else if $weight == light { font-weight: 100;}
+  @else if $weight == heavy { font-weight: 900;}
+  @else { font-weight: normal;}
+}
+
+.txt1 {
+  @include txt(bold);
+}
+
+.txt2 {
+  @include txt(light);
+}
+
+.txt3 {
+  @include txt(heavy);
+}
+
+.txt4 {
+  @include txt(none);
+}
+
+.txt5 {
+  @include txt(normal)
+}
+//
+
